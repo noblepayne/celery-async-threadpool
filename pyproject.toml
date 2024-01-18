@@ -23,4 +23,6 @@ distribution = true
 dev = [
     "ipython>=8.20.0",
     "ruff>=0.1.13",
+    "sqlalchemy>=2.0.25",
+    "pytest>=7.4.4",
 ]

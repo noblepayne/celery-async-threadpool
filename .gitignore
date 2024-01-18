@@ -1,2 +1,4 @@
+celerydb.sqlite3
 .devenv
+.direnv
 __pycache__
