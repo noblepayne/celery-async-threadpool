@@ -1,0 +1,16 @@
+name: Run pytest
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - uses: cachix/install-nix-action@v19
+      name: setup nix
+      with:
+        nix_path: nixpkgs=channel:nixos-unstable
+    - name: Run pytest
+      run: nix develop --impure --command pytest
